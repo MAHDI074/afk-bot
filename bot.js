@@ -4,7 +4,8 @@ const client = bedrock.createClient({
   host: 'Loly_choco.aternos.me',
   port: 55724,
   username: 'AFK_BOT_1', // أي اسم للبوت
-  offline: true
+  offline: true,
+  version: "1.21.93" // ✅ أضف هذا السطر
 });
 
 client.on('join', () => {
@@ -12,9 +13,9 @@ client.on('join', () => {
 });
 
 client.on('disconnect', (packet) => {
-  console.log('❌ تم فصل البوت:', packet);
+  console.log('❌ تم فصل البوت :', packet);
 });
 
 client.on('error', (err) => {
-  console.log('⚠️ حصل خطأ:', err);
+  console.log('⚠️ حدث خطأ :', err);
 });
