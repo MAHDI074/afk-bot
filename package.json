@@ -1,8 +1,8 @@
 {
-  "name": "afk-bot",
+  "name": "bedrock-afk-bot",
   "version": "1.0.0",
   "main": "bot.js",
   "dependencies": {
-    "mineflayer": "^4.11.1"
+    "bedrock-protocol": "^1.8.0"
   }
 }
