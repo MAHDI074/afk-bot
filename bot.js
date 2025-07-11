@@ -1,4 +1,4 @@
-iconst bedrock = require('bedrock-protocol');
+const bedrock = require('bedrock-protocol');
 
 const client = bedrock.createClient({
   host: 'Mahdi0742008.aternos.me',
