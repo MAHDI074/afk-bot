@@ -19,3 +19,16 @@ client.on('disconnect', (packet) => {
 client.on('error', (err) => {
   console.log('⚠️ حدث خطأ:', err);
 });
+
+// ========== Express Server للبقاء شغالًا 24/7 ==========
+
+const express = require('express');
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("✅ البوت شغال 24/7!");
+});
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log("🌐 سيرفر الويب يعمل للحفاظ على البوت شغال");
+});
