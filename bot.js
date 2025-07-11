@@ -1,11 +1,11 @@
-const bedrock = require('bedrock-protocol');
+iconst bedrock = require('bedrock-protocol');
 
 const client = bedrock.createClient({
   host: 'Mahdi0742008.aternos.me',
   port: 12943,
   username: 'AFK_BOT_1',
   offline: true,
-  version: '1.21.93.1' // ⬅️ أضف هذا السطر
+  version: '1.21.93' // ⬅️ أضف هذا السطر
 });
 
 client.on('join', () => {
