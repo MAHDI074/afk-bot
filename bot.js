@@ -5,7 +5,7 @@ const client = bedrock.createClient({
   port: 55724,
   username: 'AFK_BOT_1',
   offline: true,
-  version: '1.21.92' // ⬅️ أضف هذا السطر
+  version: '1.21.93' // ⬅️ أضف هذا السطر
 });
 
 client.on('join', () => {
