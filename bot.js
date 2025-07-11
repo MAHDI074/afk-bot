@@ -1,16 +1,20 @@
-const mineflayer = require('mineflayer');
+const bedrock = require('bedrock-protocol');
 
-const bot = mineflayer.createBot({
+const client = bedrock.createClient({
   host: 'Loly_choco.aternos.me',
   port: 55724,
-  username: 'AFK_BOT_1', // تقدر تغير الاسم
-  version: '1.21.92.1'
+  username: 'AFK_BOT_1', // أي اسم للبوت
+  offline: true
 });
 
-bot.on('spawn', () => {
+client.on('join', () => {
   console.log('✅ البوت دخل السيرفر!');
-  bot.chat('تم تشغيل AFK BOT بنجاح!');
 });
 
-bot.on('error', err => console.log('❌ خطأ:', err));
-bot.on('end', () => console.log('🔁 تم فصل البوت، يعيد الاتصال...'));
+client.on('disconnect', (packet) => {
+  console.log('❌ تم فصل البوت:', packet);
+});
+
+client.on('error', (err) => {
+  console.log('⚠️ حصل خطأ:', err);
+});
